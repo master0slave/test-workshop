@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "test_workshop"
+version = "0.0.1"
+description = "\u0e17\u0e14\u0e2a\u0e2d\u0e1a"
+authors = [
+  { name = "master0slave" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.13.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["test_workshop"]
+include = ["pyproject.toml", "test_workshop/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["test_workshop"]
+force-sort-within-sections = true
+
